@@ -4,20 +4,6 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        blue: {
-          DEFAULT: "#2997FF",
-        },
-        gray: {
-          DEFAULT: "#86868b",
-          100: "#94928d",
-          200: "#afafaf",
-          300: "#42424570",
-        },
-        zinc: {
-          DEFAULT: "#101010",
-        },
-      },
       fontFamily: {
         sans: ["Sora", "sans-serif"],
       },

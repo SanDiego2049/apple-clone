@@ -12,7 +12,7 @@ import { animateWithGsapTimeline } from "../utils/animations";
 const Model = () => {
   const [size, setSize] = useState("small");
   const [model, setModel] = useState({
-    title: "iPhone 17 Pro in Natural Titanium",
+    colorName: "Natural Titanium",
     color: ["#8F8A81", "#ffe7b9", "#6f6c64"],
     img: yellowImg,
   });
@@ -65,6 +65,12 @@ const Model = () => {
     });
   }, []);
 
+  const getTitle = () => {
+    const base = "iPhone 17 Pro";
+    const suffix = size === "large" ? " Max" : "";
+    return `${base}${suffix} in ${model.colorName}`;
+  };
+
   return (
     <section className="sm:py-32 py-20 sm:px-10 px-5">
       <div className="screen-max-width">
@@ -114,7 +120,7 @@ const Model = () => {
           </div>
 
           <div className="mx-auto w-full">
-            <p className="text-sm font-light text-center mb-5">{model.title}</p>
+            <p className="text-sm font-light text-center mb-5">{getTitle()}</p>
             <div className="flex items-center justify-center gap-2">
               <ul className="flex items-center justify-center px-4 py-4 rounded-full bg-[#42424570] backdrop-blur">
                 {models.map((model, index) => (
